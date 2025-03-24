@@ -1,1 +1,1 @@
-{"version":3,"sources":["../sass/main.scss","main.css"],"names":[],"mappings":"AAAA;EACI,UAAA;EACA,iCAAA;ACCJ","file":"main.css"}
+{"version":3,"sources":["../sass/_typography.scss","main.css","../sass/_layout.scss","../sass/_variables.scss"],"names":[],"mappings":"AAAA;EACI,oCAAA;ACCJ;;ACFA;EACI,yBCEI;EDDJ,cCEK;AFGT","file":"main.css"}
