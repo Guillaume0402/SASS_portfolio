@@ -1,15 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     background: $dark;
     color: $white;
     margin: 0 30px;    
 }
 
-main {
-    margin: 0 30px;
-}
 
-header.header-website {    
+
+header.header-website {  
+    height: 50px;
+    margin-bottom: 5px;
+    @media screen and (min-width: 768px) {  
     height: 75px;
     margin-bottom: 15px;
+    }
 }
 
