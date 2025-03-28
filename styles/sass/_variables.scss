@@ -1,15 +1,169 @@
-$primary : #E8505B;
-$secondary : #cd78d8;
-$gray : #455A64;
-$light-gray : #E0E0E0;
-$dark : #263238;
-$white : #FFFFFF;
+// Couleurs principales
+$primary: #e8505b;
+$primary-light: lighten($primary, 15%);
+$primary-dark: darken($primary, 15%);
 
+$secondary: #cd78d8;
+$secondary-light: lighten($secondary, 15%);
+$secondary-dark: darken($secondary, 15%);
 
+// Couleurs d'accent
+$accent1: #4ecdc4; // Turquoise/menthe
+$accent2: #ffd166; // Jaune/ambre
+
+// Couleurs neutres
+$gray: #455a64;
+$gray-light: lighten($gray, 25%);
+$gray-dark: darken($gray, 15%);
+$light-gray: #e0e0e0;
+$dark: #263238;
+$dark-light: lighten($dark, 15%);
+$white: #ffffff;
+
+// Thèmes sombre et clair
+:root {
+    // Thème sombre (défaut)
+    --bg-primary: #{$dark};
+    --bg-secondary: #{$dark-light};
+    --bg-card: rgba(
+        #{red($dark-light)},
+        #{green($dark-light)},
+        #{blue($dark-light)},
+        0.3
+    );
+    --bg-card-hover: rgba(
+        #{red($dark-light)},
+        #{green($dark-light)},
+        #{blue($dark-light)},
+        0.5
+    );
+
+    --text-primary: #{$white};
+    --text-secondary: rgba(
+        #{red($white)},
+        #{green($white)},
+        #{blue($white)},
+        0.9
+    );
+    --text-tertiary: #{$gray-light};
+
+    --border-color: rgba(
+        #{red($white)},
+        #{green($white)},
+        #{blue($white)},
+        0.1
+    );
+    --shadow-color: rgba(0, 0, 0, 0.2);
+
+    --bg-gradient-1: rgba(
+        #{red($accent1)},
+        #{green($accent1)},
+        #{blue($accent1)},
+        0.05
+    );
+    --bg-gradient-2: rgba(
+        #{red($secondary)},
+        #{green($secondary)},
+        #{blue($secondary)},
+        0.05
+    );
+}
+
+// Thème clair
+[data-theme="light"] {
+    --bg-primary: #ecedf2; // Gris très légèrement bleuté, plus doux
+    --bg-secondary: #f7f8fa; // Blanc cassé subtil
+    --bg-card: rgba(247, 248, 250, 0.7); // Fond de carte semi-transparent
+    --bg-card-hover: rgba(255, 255, 255, 0.9); // Blanc adouci
+
+    --text-primary: #333840; // Gris foncé moins agressif que le noir pur
+    --text-secondary: rgba(
+        51,
+        56,
+        64,
+        0.75
+    ); // Version adoucie du texte principal
+    --text-tertiary: #696e78; // Gris moyen pour les textes secondaires
+
+    --border-color: rgba(0, 0, 0, 0.07); // Bordures plus subtiles
+    --shadow-color: rgba(71, 77, 102, 0.08); // Ombres plus douces et colorées
+
+    --bg-gradient-1: rgba(
+        #{red($accent1)},
+        #{green($accent1)},
+        #{blue($accent1)},
+        0.07
+    );
+    --bg-gradient-2: rgba(
+        #{red($secondary)},
+        #{green($secondary)},
+        #{blue($secondary)},
+        0.07
+    );
+}
+
+// Map de couleurs pour générer des classes
 $colors: (
-    'primary': $primary,
-    'secondary': $secondary,
-    'gray': $gray,
-    'dark': $dark,
-    'white': $white
+    "primary": $primary,
+    "primary-light": $primary-light,
+    "primary-dark": $primary-dark,
+    "secondary": $secondary,
+    "secondary-light": $secondary-light,
+    "secondary-dark": $secondary-dark,
+    "accent1": $accent1,
+    "accent2": $accent2,
+    "gray": $gray,
+    "gray-light": $gray-light,
+    "gray-dark": $gray-dark,
+    "dark": $dark,
+    "dark-light": $dark-light,
+    "white": $white,
 );
+
+// Typographie
+$font-primary: "Montserrat", sans-serif;
+$font-secondary: "Roboto", sans-serif;
+$font-code: "Source Code Pro", monospace;
+
+// Tailles de texte (système d'échelle)
+$base-font-size: 16px;
+$font-size-xs: 0.75rem; // 12px
+$font-size-sm: 0.875rem; // 14px
+$font-size-md: 1rem; // 16px
+$font-size-lg: 1.125rem; // 18px
+$font-size-xl: 1.25rem; // 20px
+$font-size-2xl: 1.5rem; // 24px
+$font-size-3xl: 1.875rem; // 30px
+$font-size-4xl: 2.25rem; // 36px
+$font-size-5xl: 3rem; // 48px
+$font-size-6xl: 4rem; // 64px
+
+// Poids des polices
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semi-bold: 600;
+$font-weight-bold: 700;
+
+// Espacement
+$spacing-unit: 8px;
+$spacing-xs: $spacing-unit; // 8px
+$spacing-sm: $spacing-unit * 2; // 16px
+$spacing-md: $spacing-unit * 3; // 24px
+$spacing-lg: $spacing-unit * 4; // 32px
+$spacing-xl: $spacing-unit * 6; // 48px
+$spacing-2xl: $spacing-unit * 8; // 64px
+$spacing-3xl: $spacing-unit * 12; // 96px
+
+// Breakpoints
+$breakpoint-xs: 375px;
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+$breakpoint-2xl: 1400px;
+
+// Animations
+$transition-fast: 0.3s ease;
+$transition-medium: 0.5s ease;
+$transition-slow: 0.8s ease;

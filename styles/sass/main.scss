@@ -1,5 +1,20 @@
-@import 'variables';
-@import 'typography';
-@import 'layout';
-@import 'components';
-@import 'buttons';
+// Import des variables et configurations de base
+@import "variables";
+
+// Import des styles globaux et du layout
+@import "typography";
+@import "layout";
+
+// Import des composants et éléments d'interface
+@import "buttons";
+@import "components";
+
+/*
+Palette étendue et système typographique
+
+Ce projet utilise maintenant:
+- Une palette de couleurs étendue avec nuances et couleurs d'accent
+- Un système typographique complet avec échelle de tailles
+- Des variables d'espacement cohérentes
+- Des classes d'utilité pour la typographie et les couleurs
+*/

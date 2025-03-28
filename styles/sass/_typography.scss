@@ -1,3 +1,184 @@
+// Styles de base du corps
 body {
-    font: 19px / 23px 'Montserrat', sans-serif;
+    font-family: $font-primary;
+    font-size: $base-font-size;
+    font-weight: $font-weight-regular;
+    line-height: 1.5;
+    color: $white;
+}
+
+// Styles généraux des titres
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $font-primary;
+    font-weight: $font-weight-bold;
+    margin-bottom: $spacing-md;
+    line-height: 1.2;
+}
+
+// Définition des tailles spécifiques pour chaque niveau de titre
+h1 {
+    font-size: $font-size-4xl;
+
+    @media screen and (min-width: $breakpoint-md) {
+        font-size: $font-size-5xl;
     }
+
+    @media screen and (min-width: $breakpoint-xl) {
+        font-size: $font-size-6xl;
+    }
+}
+
+h2 {
+    font-size: $font-size-3xl;
+
+    @media screen and (min-width: $breakpoint-md) {
+        font-size: $font-size-4xl;
+    }
+}
+
+h3 {
+    font-size: $font-size-2xl;
+
+    @media screen and (min-width: $breakpoint-md) {
+        font-size: $font-size-3xl;
+    }
+}
+
+h4 {
+    font-size: $font-size-xl;
+
+    @media screen and (min-width: $breakpoint-md) {
+        font-size: $font-size-2xl;
+    }
+}
+
+h5 {
+    font-size: $font-size-lg;
+
+    @media screen and (min-width: $breakpoint-md) {
+        font-size: $font-size-xl;
+    }
+}
+
+h6 {
+    font-size: $font-size-md;
+
+    @media screen and (min-width: $breakpoint-md) {
+        font-size: $font-size-lg;
+    }
+}
+
+// Styles de paragraphe
+p {
+    margin-bottom: $spacing-md;
+    font-family: $font-secondary;
+
+    &.lead {
+        font-size: $font-size-lg;
+        font-weight: $font-weight-light;
+        line-height: 1.6;
+    }
+
+    &.small {
+        font-size: $font-size-sm;
+        line-height: 1.4;
+    }
+
+    &.caption {
+        font-size: $font-size-xs;
+        color: $gray-light;
+        font-style: italic;
+    }
+}
+
+// Styles pour le texte mis en évidence
+.highlight {
+    color: $accent1;
+    font-weight: $font-weight-medium;
+}
+
+.accent {
+    color: $accent2;
+}
+
+// Classes utilitaires pour la typographie
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-left {
+    text-align: left;
+}
+
+// Poids des polices
+.font-light {
+    font-weight: $font-weight-light;
+}
+
+.font-normal {
+    font-weight: $font-weight-regular;
+}
+
+.font-medium {
+    font-weight: $font-weight-medium;
+}
+
+.font-semibold {
+    font-weight: $font-weight-semi-bold;
+}
+
+.font-bold {
+    font-weight: $font-weight-bold;
+}
+
+// Styles pour le texte spécial
+.font-secondary {
+    font-family: $font-secondary;
+}
+
+.font-code {
+    font-family: $font-code;
+    background-color: $dark-light;
+    padding: $spacing-xs $spacing-sm;
+    border-radius: 4px;
+}
+
+// Liens
+a {
+    color: $primary;
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+    &:hover {
+        color: $primary-light;
+        text-decoration: underline;
+    }
+
+    &.subtle-link {
+        color: $gray-light;
+
+        &:hover {
+            color: $white;
+        }
+    }
+}
+
+// Listes
+ul,
+ol {
+    margin-bottom: $spacing-md;
+    padding-left: $spacing-lg;
+
+    li {
+        margin-bottom: $spacing-xs;
+    }
+}

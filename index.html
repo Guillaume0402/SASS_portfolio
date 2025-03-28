@@ -1,30 +1,73 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-theme="dark">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&family=Source+Code+Pro:wght@400;600&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+            integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
         <link rel="stylesheet" href="styles/css/main.css" />
         <title>Portfolio Guillaume MGT</title>
     </head>
     <body>
-        <header class="header-website">Header</header>
+        <header class="header-website">
+            <div class="header-container">
+                <div class="logo">Guillaume<span>MGT</span></div>
+                <nav>
+                    <ul>
+                        <li><a href="#home" class="active">Accueil</a></li>
+                        <li><a href="#competences">Compétences</a></li>
+                        <li><a href="#projets">Projets</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                    <div class="theme-toggle">
+                        <i class="fas fa-moon"></i>
+                        <label class="switch">
+                            <input type="checkbox" id="theme-switch" />
+                            <span class="slider"></span>
+                        </label>
+                        <i class="fas fa-sun"></i>
+                    </div>
+                </nav>
+            </div>
+        </header>
 
         <main>
-            <section class="section-display left-text-content">
+            <section
+                id="home"
+                class="section-display left-text-content"
+                style="--section-index: 0"
+            >
                 <article class="text-content">
                     <h1 class="title">Guillaume MGT</h1>
                     <p class="paragraph">
-                        Développeur web junior en formation chez Studi, je suis
-                        passionné par le développement web et les nouvelles
-                        technologies. Spécialisé en PHP, je suis également à
-                        l'aise avec le HTML, CSS, JavaScript et les bases de
-                        données.
+                        Développeur web <strong>junior</strong> en formation
+                        chez Studi, je suis passionné par le développement web
+                        et les nouvelles technologies. Spécialisé en
+                        <strong>PHP</strong>, je suis également à l'aise avec le
+                        <strong>HTML</strong>, <strong>CSS</strong>,
+                        <strong>JavaScript</strong> et les bases de données.
                     </p>
-                    
+
                     <div class="action-div">
-                        <button class="btn btn-primary">Contact</button>
-                        <button class="btn btn-primary">Mon CV</button>
+                        <button class="btn btn-primary btn-icon">
+                            <i class="fas fa-envelope"></i>
+                            Contact
+                        </button>
+                        <button
+                            class="btn btn-outline btn-outline-secondary btn-icon"
+                        >
+                            <i class="fas fa-file-alt"></i>
+                            Mon CV
+                        </button>
                     </div>
                 </article>
                 <div class="illustration">
@@ -34,73 +77,225 @@
                     />
                 </div>
             </section>
-            <section class="section-display right-text-content">
+
+            <section
+                id="competences"
+                class="section-display right-text-content"
+                style="--section-index: 1"
+            >
                 <article class="text-content">
                     <h2 class="title">Mes compétences</h2>
                     <p class="paragraph">
-                        Je suis capable de créer des sites web responsives et
-                        dynamiques, en utilisant les dernières technologies et
-                        frameworks. Je suis également à l'aise avec la gestion de
-                        bases de données et le développement back-end. Je suis
-                        toujours à la recherche de nouveaux défis et d'opportunités.                       
+                        Je suis capable de créer des sites web
+                        <strong>responsives</strong> et
+                        <strong>dynamiques</strong>, en utilisant les dernières
+                        technologies et frameworks. Je suis également à l'aise
+                        avec la gestion de bases de données et le développement
+                        back-end. Je suis toujours à la recherche de nouveaux
+                        défis et d'opportunités.
                     </p>
                     <div class="competences-icons">
-                        <i class="fa-brands fa-html5"></i>
-                        <i class="fa-brands fa-css3-alt"></i>
-                        <i class="fa-brands fa-square-js"></i>
-                        <i class="fa-brands fa-php"></i>
-                        <i class="fa-brands fa-angular"></i>                                       
+                        <i class="fa-brands fa-html5" title="HTML5"></i>
+                        <i class="fa-brands fa-css3-alt" title="CSS3"></i>
+                        <i
+                            class="fa-brands fa-square-js"
+                            title="JavaScript"
+                        ></i>
+                        <i class="fa-brands fa-php" title="PHP"></i>
+                        <i class="fa-brands fa-react" title="React"></i>
                     </div>
                 </article>
                 <div class="illustration">
                     <img src="img/competences.svg" alt="Compétences" />
                 </div>
             </section>
-            <section class="section-display left-text-content">
+
+            <section
+                id="projets"
+                class="section-display left-text-content"
+                style="--section-index: 2"
+            >
                 <article class="text-content">
-                    <h2 class="title">Mes compétences</h2>
+                    <h2 class="title">Mes projets</h2>
                     <p class="paragraph">
-                        Je suis capable de créer des sites web responsives et
-                        dynamiques, en utilisant les dernières technologies et
-                        frameworks. Je suis également à l'aise avec la gestion de
-                        bases de données et le développement back-end. Je suis
-                        toujours à la recherche de nouveaux défis et d'opportunités.                       
+                        Voici une sélection de mes derniers projets. Chaque
+                        projet est une opportunité d'apprentissage et
+                        d'amélioration de mes compétences. J'aime
+                        particulièrement les défis techniques qui me poussent à
+                        explorer de nouvelles solutions.
                     </p>
-                    <div class="competences-icons">
-                        <i class="fa-brands fa-html5"></i>
-                        <i class="fa-brands fa-css3-alt"></i>
-                        <i class="fa-brands fa-square-js"></i>
-                        <i class="fa-brands fa-php"></i>
-                        <i class="fa-brands fa-angular"></i>                                       
+
+                    <div class="skill-card">
+                        <div class="skill-name">
+                            <i class="fas fa-code"></i>
+                            <h3>Développement Front-end</h3>
+                        </div>
+                        <div class="skill-level">
+                            <div class="progress" style="--progress: 85%"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-name">
+                            <i class="fas fa-database"></i>
+                            <h3>Développement Back-end</h3>
+                        </div>
+                        <div class="skill-level">
+                            <div class="progress" style="--progress: 75%"></div>
+                        </div>
+                    </div>
+
+                    <div class="action-div">
+                        <button class="btn btn-accent1 btn-icon">
+                            <i class="fas fa-eye"></i>
+                            Voir plus
+                        </button>
                     </div>
                 </article>
                 <div class="illustration">
-                    <img src="img/presentation2.svg" alt="Compétences" />
+                    <img src="img/presentation2.svg" alt="Projets" />
                 </div>
             </section>
-            <section class="section-display right-text-content">
+
+            <section
+                id="contact"
+                class="section-display right-text-content"
+                style="--section-index: 3"
+            >
                 <article class="text-content">
-                    <h2 class="title">Mes compétences</h2>
+                    <h2 class="title">Contactez-moi</h2>
                     <p class="paragraph">
-                        Je suis capable de créer des sites web responsives et
-                        dynamiques, en utilisant les dernières technologies et
-                        frameworks. Je suis également à l'aise avec la gestion de
-                        bases de données et le développement back-end. Je suis
-                        toujours à la recherche de nouveaux défis et d'opportunités.                       
+                        Vous avez un projet ou une opportunité à me proposer ?
+                        N'hésitez pas à me contacter. Je suis toujours à la
+                        recherche de nouveaux défis et collaborations. Vous
+                        pouvez me joindre par email ou via les réseaux sociaux.
                     </p>
                     <div class="competences-icons">
-                        <i class="fa-brands fa-html5"></i>
-                        <i class="fa-brands fa-css3-alt"></i>
-                        <i class="fa-brands fa-square-js"></i>
-                        <i class="fa-brands fa-php"></i>
-                        <i class="fa-brands fa-angular"></i>                                       
+                        <i class="fa-brands fa-github" title="GitHub"></i>
+                        <i class="fa-brands fa-linkedin" title="LinkedIn"></i>
+                        <i class="fa-brands fa-twitter" title="Twitter"></i>
+                        <i class="fa-solid fa-envelope" title="Email"></i>
                     </div>
                 </article>
                 <div class="illustration">
-                    <img src="img/competences.svg" alt="Compétences" />
+                    <img src="img/competences.svg" alt="Contact" />
                 </div>
             </section>
         </main>
-        <footer>Footer</footer>
+
+        <footer>
+            <div class="footer-container">
+                <div class="social-links">
+                    <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="#" title="LinkedIn"
+                        ><i class="fab fa-linkedin"></i
+                    ></a>
+                    <a href="#" title="Twitter"
+                        ><i class="fab fa-twitter"></i
+                    ></a>
+                    <a href="#" title="Email"
+                        ><i class="fas fa-envelope"></i
+                    ></a>
+                </div>
+
+                <div class="footer-nav">
+                    <a href="#home">Accueil</a>
+                    <a href="#competences">Compétences</a>
+                    <a href="#projets">Projets</a>
+                    <a href="#contact">Contact</a>
+                </div>
+
+                <p class="copyright">
+                    © 2023 Guillaume MGT. Tous droits réservés.
+                </p>
+            </div>
+        </footer>
+
+        <script>
+            // Script pour le switch de thème sombre/clair
+            document.addEventListener("DOMContentLoaded", function () {
+                const themeSwitch = document.getElementById("theme-switch");
+                const htmlElement = document.documentElement;
+
+                // Vérifie si une préférence est stockée dans le localStorage
+                const savedTheme = localStorage.getItem("theme");
+
+                if (savedTheme) {
+                    htmlElement.setAttribute("data-theme", savedTheme);
+                    themeSwitch.checked = savedTheme === "light";
+                } else {
+                    // Vérifier les préférences du système
+                    const prefersDarkScheme = window.matchMedia(
+                        "(prefers-color-scheme: dark)"
+                    ).matches;
+                    if (prefersDarkScheme) {
+                        htmlElement.setAttribute("data-theme", "dark");
+                        themeSwitch.checked = false;
+                    } else {
+                        htmlElement.setAttribute("data-theme", "light");
+                        themeSwitch.checked = true;
+                    }
+                }
+
+                // Gestion du changement de thème
+                themeSwitch.addEventListener("change", function () {
+                    if (this.checked) {
+                        htmlElement.setAttribute("data-theme", "light");
+                        localStorage.setItem("theme", "light");
+                    } else {
+                        htmlElement.setAttribute("data-theme", "dark");
+                        localStorage.setItem("theme", "dark");
+                    }
+                });
+
+                // Fonction pour mettre à jour les valeurs RGB pour les animations et effets
+                function updateRgbValues() {
+                    const computedStyle = getComputedStyle(htmlElement);
+                    const bgSecondary = computedStyle
+                        .getPropertyValue("--bg-secondary")
+                        .trim();
+
+                    // Convertir la couleur en valeurs RGB
+                    const tempDiv = document.createElement("div");
+                    tempDiv.style.color = bgSecondary;
+                    document.body.appendChild(tempDiv);
+                    const rgbColor = getComputedStyle(tempDiv).color;
+                    document.body.removeChild(tempDiv);
+
+                    // Extraire les valeurs R, G, B
+                    const rgbValues = rgbColor.match(/\d+/g);
+                    if (rgbValues && rgbValues.length >= 3) {
+                        const rgbString = `${rgbValues[0]}, ${rgbValues[1]}, ${rgbValues[2]}`;
+                        document.documentElement.style.setProperty(
+                            "--bg-secondary-rgb",
+                            rgbString
+                        );
+                    }
+                }
+
+                // Mettre à jour les valeurs RGB au chargement et au changement de thème
+                updateRgbValues();
+                themeSwitch.addEventListener("change", updateRgbValues);
+
+                // Animation des sections au scroll
+                const observer = new IntersectionObserver(
+                    (entries) => {
+                        entries.forEach((entry) => {
+                            if (entry.isIntersecting) {
+                                entry.target.style.opacity = "1";
+                                entry.target.style.transform = "translateY(0)";
+                            }
+                        });
+                    },
+                    {
+                        threshold: 0.1,
+                    }
+                );
+
+                document.querySelectorAll("section").forEach((section) => {
+                    observer.observe(section);
+                });
+            });
+        </script>
     </body>
 </html>
